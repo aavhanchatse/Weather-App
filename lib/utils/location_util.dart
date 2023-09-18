@@ -49,7 +49,18 @@ class LocationUtils {
         // your App should show an explanatory UI now.
         debugPrint('Location permissions are denied');
 
-        SnackBarUtil.showSnackBar('Location permission denied');
+        SnackBarUtil.showSnackBar(
+          'Location permission denied',
+          actionButton: TextButton(
+            onPressed: () {
+              AppSettings.openLocationSettings();
+            },
+            child: Text(
+              'App Settings',
+              style: TextStyle(color: Constants.white, fontSize: 1.8.t),
+            ),
+          ),
+        );
         return null;
         // return Future.error('Location permissions are denied');
       }

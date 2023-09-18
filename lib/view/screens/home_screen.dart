@@ -34,7 +34,13 @@ class HomeScreen extends StatelessWidget {
 
     return Obx(
       () => controller.loading.value == true
-          ? const Center(child: CircularProgressIndicator())
+          ? SizedBox(
+              height: 50.h,
+              width: double.infinity,
+              child: const Center(
+                child: CircularProgressIndicator(),
+              ),
+            )
           : SizedBox(
               width: double.infinity,
               child: Column(
@@ -139,7 +145,13 @@ class HomeScreen extends StatelessWidget {
 
     return Obx(
       () => controller.loading2.value == true
-          ? const Center(child: CircularProgressIndicator())
+          ? SizedBox(
+              height: 50.h,
+              width: double.infinity,
+              child: const Center(
+                child: CircularProgressIndicator(),
+              ),
+            )
           : Column(
               children: [
                 Container(
